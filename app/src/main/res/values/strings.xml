@@ -14,4 +14,8 @@
     <string name="what_is_this">4.What is this?</string>
     <string name="harmonica_hint">beautiful folk instrument</string>
     <string name="submit_quiz">SUBMIT QUIZ</string>
+    <string name="delta_blues">Delta blues</string>
+    <string name="nu_metal">Nu metal</string>
+    <string name="electro">Electronic</string>
+    <string name="select_the_oldest_musical_gender">5. Select the oldest musical gender:</string>
 </resources>
