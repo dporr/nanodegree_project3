@@ -92,16 +92,6 @@
             android:layout_width="match_parent"
             android:hint="@string/harmonica_hint"/>
     </LinearLayout>
-    <LinearLayout   style="@style/question_layout">
-        <Button
-            android:id="@+id/button_submit"
-            android:onClick="submitQuizz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/accent"
-            android:text="@string/submit_quiz"/>
-        </LinearLayout>
-</LinearLayout>
     <LinearLayout style="@style/question_layout">
         <TextView
             style="@style/question"
@@ -124,5 +114,17 @@
                 android:text="@string/delta_blues"/>
         </RadioGroup>
     </LinearLayout>
+
+    <LinearLayout   style="@style/question_layout">
+        <Button
+            android:id="@+id/button_submit"
+            android:onClick="submitQuizz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/accent"
+            android:text="@string/submit_quiz"/>
+        </LinearLayout>
+
+</LinearLayout>
 
 </ScrollView>
