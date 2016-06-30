@@ -26,15 +26,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
-                android:id="@+id/q1_ukulele"
+                android:id="@+id/q1_radio_ukulele"
                 style="@style/answer"
                 android:text="@string/ukulele"/>
             <RadioButton
-                android:id="@+id/q1_drums"
+                android:id="@+id/q1_radio_drums"
                 style="@style/answer"
                 android:text="@string/drums"/>
             <RadioButton
-                android:id="@+id/q1_guitar"
+                android:id="@+id/q1_radio_guitar"
                 style="@style/answer"
                 android:text="@string/guitar"/>
         </RadioGroup>
@@ -92,5 +92,13 @@
             android:layout_width="match_parent"
             android:hint="@string/harmonica_hint"/>
     </LinearLayout>
+    <LinearLayout   style="@style/question_layout">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/accent"
+            android:text="@string/submit_quiz"/>
+        </LinearLayout>
 </LinearLayout>
+
 </ScrollView>
