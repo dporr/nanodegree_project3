@@ -102,5 +102,27 @@
             android:text="@string/submit_quiz"/>
         </LinearLayout>
 </LinearLayout>
+    <LinearLayout style="@style/question_layout">
+        <TextView
+            style="@style/question"
+            android:text="@string/select_the_oldest_musical_gender"/>
+        <RadioGroup
+            android:id="@+id/rGroupQuestion5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/q5_radio_electro"
+                style="@style/answer"
+                android:text="@string/electro"/>
+            <RadioButton
+                android:id="@+id/q5_radio_nu_metal"
+                style="@style/answer"
+                android:text="@string/nu_metal"/>
+            <RadioButton
+                android:id="@+id/q5_radio_delta_blues"
+                style="@style/answer"
+                android:text="@string/delta_blues"/>
+        </RadioGroup>
+    </LinearLayout>
 
 </ScrollView>
