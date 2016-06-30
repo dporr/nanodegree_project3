@@ -1,16 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    android:paddingRight="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="dporras.nanodegree.quizapp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <LinearLayout style="@style/question_layout">
+        <TextView
+            style="@style/question"
+            android:text="@string/which_instrument_string_number"/>
+        <RadioGroup
+            android:id="@+id/rGroupQuestion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/q1_ukulele"
+                style="@style/answer"
+                android:text="@string/ukulele"/>
+            <RadioButton
+                android:id="@+id/q1_drums"
+                style="@style/answer"
+                android:text="@string/drums"/>
+            <RadioButton
+                android:id="@+id/q1_guitar"
+                style="@style/answer"
+                android:text="@string/guitar"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout style="@style/question_layout"
+        >
+        <TextView
+            style="@style/question"
+            android:text="@string/favorite_blues_player"/>
+        <CheckBox
+            android:id="@+id/q2_hendrix"
+            style="@style/answer"
+            android:text="@string/jimmy_hendrix"/>
+        <CheckBox
+            android:id="@+id/q2_trump"
+            style="@style/answer"
+            android:text="@string/donald_trump"/>
+        <CheckBox
+            android:id="@+id/q2_watters"
+            style="@style/answer"
+            android:text="@string/muddy_watters"/>
+        <CheckBox
+            android:id="@+id/q2_clapton"
+            style="@style/answer"
+            android:text="@string/erick_clapton"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/question_layout">
+        <TextView
+            style="@style/question"
+            android:text="@string/input_manish_boy"/>
+        <EditText
+            android:id="@+id/q3_mannish_boy"
+            style="@style/answer"
+            android:layout_width="match_parent"
+            android:hint="@string/manish_boy"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/question_layout">
+    </LinearLayout>
+
+    <LinearLayout   style="@style/question_layout">
+        <TextView
+            style="@style/question"
+            android:text="@string/what_is_this" />
+        <ImageView
+            android:src="@drawable/harmonic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+        <EditText
+            android:id="@+id/q4_harmonica"
+            style="@style/answer"
+            android:layout_width="match_parent"
+            android:hint="@string/harmonica_hint"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
