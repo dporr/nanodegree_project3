@@ -10,7 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
-
+    private RadioGroup rGroupQuestion1;
+    private RadioGroup rGroupQuestion5;
     private CheckBox q2_hendrix;
     private CheckBox q2_trump;
     private CheckBox q2_watters;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         initLayoutComponents();
     }
     private void initLayoutComponents(){
+        rGroupQuestion1 = (RadioGroup) findViewById(R.id.rGroupQuestion1);
+        rGroupQuestion5 = (RadioGroup) findViewById(R.id.rGroupQuestion5);
         q2_hendrix = (CheckBox) findViewById(R.id.q2_hendrix);
         q2_trump = (CheckBox) findViewById(R.id.q2_trump);
         q2_watters = (CheckBox) findViewById(R.id.q2_watters);
@@ -44,11 +47,11 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
      */
     public void submitQuizz(View view){
         //Lower case q3 answer is the same as expected, give 1 point
-        if(q3_mannish_boy.getText().toString().toLowerCase().equals(Q3_ANSWER.toLowerCase()))
+        if(q3_mannish_boy.getText().toString().trim().toLowerCase().equals(Q3_ANSWER.toLowerCase()))
             totalScore++;
 
         //Lower case q4 answer is the same as expected, give 1 point
-        if(q4_harmonica.getText().toString().toLowerCase().equals(Q4_ANSWER.toLowerCase()))
+        if(q4_harmonica.getText().toString().trim().toLowerCase().equals(Q4_ANSWER.toLowerCase()))
             totalScore++;
 
         //If any blues player is checked gives 1 point, if trump is checked user failed to answer
@@ -77,7 +80,18 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     private void cleanInputs(){
         totalScore=0;
-
-
+        //Reset question 1 answer
+        rGroupQuestion1.clearCheck();
+        //Reset question 2 answers
+        q2_clapton.setChecked(false);
+        q2_hendrix.setChecked(false);
+        q2_trump.setChecked(false);
+        q2_watters.setChecked(false);
+        //Reset question 3 answer
+        q3_mannish_boy.setText("");
+        //Reset question 4 answer
+        q4_harmonica.setText("");
+        //Reset question 5 answers
+        rGroupQuestion5.clearCheck();
     }
 }
