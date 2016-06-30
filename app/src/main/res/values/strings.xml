@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="which_instrument_string_number">1. Which instrument usually has 6,7 or 12 strings?</string>
+    <string name="guitar">Guitar</string>
+    <string name="drums">Drums</string>
+    <string name="ukulele">Ukulele</string>
+    <string name="favorite_blues_player">2. Who is the best Blues player?</string>
+    <string name="input_manish_boy">3. Input the right name for this famous blues song:</string>
+    <string name="manish_boy">Mannesh Toy</string>
+    <string name="muddy_watters">Muddy Watters</string>
+    <string name="donald_trump">Donald Trump</string>
+    <string name="jimmy_hendrix">Jimmy Hendrix</string>
+    <string name="erick_clapton">Erick Clapton</string>
+    <string name="what_is_this">4.What is this?</string>
+    <string name="harmonica_hint">beautiful folk instrument</string>
+    <string name="submit_quiz">SUBMIT QUIZ</string>
 </resources>
