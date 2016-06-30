@@ -9,7 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
+public class MainActivity extends AppCompatActivity{
     private RadioGroup rGroupQuestion1;
     private RadioGroup rGroupQuestion5;
     private CheckBox q2_hendrix;
@@ -46,6 +46,16 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
      * @param view
      */
     public void submitQuizz(View view){
+        //Retrieve question 1 rigth answer
+        switch (rGroupQuestion1.getCheckedRadioButtonId()){
+            case R.id.q1_radio_ukulele:
+                break;
+            case R.id.q1_radio_drums:
+                break;
+            case R.id.q1_radio_guitar:
+                totalScore++;
+        }
+
         //Lower case q3 answer is the same as expected, give 1 point
         if(q3_mannish_boy.getText().toString().trim().toLowerCase().equals(Q3_ANSWER.toLowerCase()))
             totalScore++;
@@ -59,22 +69,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 (q2_clapton.isChecked() || q2_hendrix.isChecked() || q2_watters.isChecked()))
             totalScore++;
 
-        //Displays the final result
-        String result = "Congrats! Your total Score is: " + totalScore +" of 4 total possible points!";
-        Toast.makeText(MainActivity.this, result , Toast.LENGTH_LONG).show();
-
-        cleanInputs();
-    }
-
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        switch (checkedId){
-            case R.id.q1_radio_ukulele:
-                break;
-            case R.id.q1_radio_drums:
-                break;
-            case R.id.q1_radio_guitar:
-                totalScore++;
+        //Retrieve question 5 rigth answer
+        switch (rGroupQuestion5.getCheckedRadioButtonId()){
             case R.id.q5_radio_electro:
                 break;
             case R.id.q5_radio_nu_metal:
@@ -82,6 +78,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.q5_radio_delta_blues:
                 totalScore++;
         }
+
+       //Displays the final result
+        String result = "Congrats! Your total Score is: " + totalScore +" of 5 total possible points!";
+        Toast.makeText(MainActivity.this, result , Toast.LENGTH_SHORT).show();
+
+        cleanInputs();
     }
 
     private void cleanInputs(){
