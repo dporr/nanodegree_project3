@@ -75,6 +75,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 break;
             case R.id.q1_radio_guitar:
                 totalScore++;
+            case R.id.q5_radio_electro:
+                break;
+            case R.id.q5_radio_nu_metal:
+                break;
+            case R.id.q5_radio_delta_blues:
+                totalScore++;
         }
     }
 
