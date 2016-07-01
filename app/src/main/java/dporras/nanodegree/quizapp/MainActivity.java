@@ -80,9 +80,13 @@ public class MainActivity extends AppCompatActivity{
         }
 
        //Displays the final result
-        String result = "Congrats! Your total Score is: " + totalScore +" of 5 total possible points!";
+        String result;
+        if(totalScore>0) {
+            result = "Congrats! Your total Score is: " + totalScore + " of 5 total possible points!";
+        }else{
+            result = "Sorry! Your total Score is: " + totalScore + " keep trying!";
+        }
         Toast.makeText(MainActivity.this, result , Toast.LENGTH_SHORT).show();
-
         cleanInputs();
     }
 
